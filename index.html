@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
             <img src="odin-lined.png" alt="odin picture">
             <h3>ODIN</h3>
         </div>
-        <p class="source">Photo by <a href="">XX</a> on <a href="">XXX</a></p>
+        <p class="source">Photo by <a href="https://unsplash.com/@masamasa3">masahiro miyagi</a> on <a href="https://unsplash.com/">Unsplash</a></p>
     </div>
     <div class="container">
         <div class="header">
@@ -27,11 +28,11 @@
                 <div class="form">
                     <div class="input">
                         <p><label for="firstname">FIRST NAME</label></p>
-                        <input type="text" name="firstname" id="firstname" required>
+                        <input type="text" name="firstname" id="firstname" minlength="3" required>
                     </div>
                     <div class="input">
                         <p><label for="lastname">LAST NAME</label></p>
-                        <input type="text" name="lastname" id="lastname" required>
+                        <input type="text" name="lastname" id="lastname" minlength="2" required>
                     </div>
                     <div class="input">
                         <p><label for="email">EMAIL</label></p>
@@ -40,17 +41,17 @@
                     </div>
                     <div class="input">
                         <p><label for="phone">PHONE NUMBER</label></p>
-                        <input type="tel" name="phone" id="phone" required>
-                        <p class="phone" hidden>Format of email is incorrect</p>
+                        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="XXX-XX-XXX" required>
+                        <p class="phone" hidden>Format of phone number is incorrect</p>
                     </div>
                     <div class="input">
                         <p><label for="password">PASSWORD</label></p>
-                        <input type="password" name="password" id="password" required>
+                        <input type="password" name="password" id="password" minlength="8" required>
                     </div>
                     <div class="input">
                         <p><label for="confirm_pwd">CONFIRM PASSWORD</label></p>
-                        <input type="password" name="confirm_pwd" id="confirm_pwd" required>
-                        <p class="confirm_pwd" hidden>Password does not match</p>
+                        <input type="password" name="confirm_pwd" id="confirm_pwd" minlength="8" required>
+                        <p class="confirm_pwd">Password does not match</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +61,7 @@
         </form>
 
         <div class="login">
-            <h3>Already have an account? Log in</h3>
+            <h3>Already have an account? <a href="#">Log in</a></h3>
         </div>
 
     </div>

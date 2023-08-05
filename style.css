@@ -72,6 +72,20 @@ img {
     text-align: center;
     color: white;
     margin: 4%;
+    font-size: larger;
+}
+
+.source a {
+    color: aqua;
+}
+
+.source a:hover {
+    color: white;
+    text-shadow:
+    -1px -1px 0 aqua,
+    1px -1px 0 aqua,
+    -1px 1px 0 aqua,
+    1px 1px 0 aqua  
 }
 
 .container {
@@ -112,7 +126,7 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
-.input input {
+.input input:required {
     width: 100%;
     height: 2rem;
     background-color: rgba(128, 128, 128, 0);
@@ -120,11 +134,68 @@ h2 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.input input:focus {
-    border: 3px solid aqua;
+input:required:focus {
+    border: 5px solid aqua;
+    scale: 1.01;
 }
 
-.input input:invalid {
-    background-color: lightpink;
-    border: 3px solid red;
+input:required:valid {
+    background-color: lightgreen;
+    border: 2px solid green;
 }
+
+input~p {
+    font-size: small;
+    color: red;
+}
+
+.create_acc {
+    padding-left: 3rem;
+    margin-top: 3rem;
+}
+
+button {
+    padding: 1rem;
+    background-color: white;
+    border: 2px solid red;
+    color: red;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+    border: 2px solid red;
+    color: white
+}
+
+.login {
+    padding-left: 3rem;
+    margin-top: 1%;
+}
+
+.login a {
+    color: red;
+}
+
+.login a:hover {
+    color: white;
+    text-shadow:
+    -1px -1px 0 red,
+    1px -1px 0 red,
+    -1px 1px 0 red,
+    1px 1px 0 red;  
+}
+
+
+
+
+
+  
+
+
+
+
+
+
